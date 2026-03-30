@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Job Application Form</h1>
+    <div class="container">
+        <form>
+            <fieldset>
+                <label for="name">Full Name: </label>
+                <input type="text" id="name" name="applicant-name" placeholder="Enter your name">
+            </fieldset>
+
+            <fieldset>
+                <label for="email">Email: </label>
+                <input type="email" id="email"name="applicant-email" placeholder="Enter your email">
+            </fieldset>
+            <fieldset>
+                <label for="position">Position: </label>
+                <select id="position" name="positions">
+                    <option value="">Please choose an option</option>
+                    <option value="full-stack">Full-Stack Developer</option>
+                    <option value="designer">UI/UX Designer</option>
+                    <option value="front-end">Frontend Engineer</option>
+                    <option value="back-end">Backend Engineer</option>
+                </select>
+            </fieldset>
+            <fieldset class="radio-group">
+                <legend>Availability</legend>
+                
+                <input type="radio" id="full-time" name="availability" value="full-time" class="availability-radio-btn">
+                <label class="availability" for="full-time">Full-Time</label>
+                
+                <input type="radio" class="availability-radio-btn" name="availability" value="part-time" id="part-time">
+                <label class="availability" for="part-time">Part-Time</label>
+            </fieldset>
+            <fieldset>
+                <legend>Why do you want this job</legend>
+                <textarea id="message" placeholder="What is your motivation?"></textarea>
+            </fieldset>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
