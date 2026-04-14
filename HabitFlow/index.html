@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <title>Habit Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+  <body>
+  <div class="app">
+    <div class="glow"></div>
+
+    <header>
+      <div class="title-block">
+        <div class="logo">
+          <div class="logo-inner">H</div>
+        </div>
+        <div class="title-text">
+          <h1>
+            HabitFlow
+            <span class="pill">Live Streaks</span>
+          </h1>
+          <p>Tap to complete habits, watch your streaks grow in real time.</p>
+        </div>
+      </div>
+      <div class="today" id="todayText"></div>
+    </header>
+
+    <div class="layout">
+      <section class="card">
+        <div class="card-header">
+          <div>
+            <h2>Habits</h2>
+            <span>Track your week at a glance</span>
+          </div>
+          <div class="streak">
+            <div class="streak-dot"></div>
+            <div>
+              <strong id="globalStreak">0</strong> day streak
+            </div>
+          </div>
+        </div>
+
+        <form class="add-form" id="habitForm">
+          <input
+            type="text"
+            id="habitInput"
+            placeholder="Add a habit (e.g. Drink water, Read 10 pages)"
+            autocomplete="off"
+          />
+          <button type="submit">
+            <span>+</span> Add
+          </button>
+        </form>
+
+        <div class="week-strip" id="weekStrip"></div>
+
+        <div class="habit-list" id="habitList"></div>
+
+        <div class="empty-state" id="emptyState">
+          No habits yet. Add your first one and tap the circles to mark days as
+          <span>done</span>.
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <div>
+            <h2>Overview</h2>
+            <span>How your week is going</span>
+          </div>
+        </div>
+
+        <div class="summary">
+          <div class="summary-card">
+            <div class="summary-label">Today</div>
+            <div class="summary-value accent" id="todayCompleted">0 / 0</div>
+            <div class="summary-sub" id="todayCompletedSub">No habits yet.</div>
+          </div>
+          <div class="summary-card">
+            <div class="summary-label">This week</div>
+            <div class="summary-value good" id="weekCompletion">0%</div>
+            <div class="summary-sub" id="weekCompletionSub">0 of 0 check-ins</div>
+          </div>
+          <div class="summary-card">
+            <div class="summary-label">Best day</div>
+            <div class="summary-value warn" id="bestDayLabel">–</div>
+            <div class="summary-sub" id="bestDaySub">Waiting for data</div>
+          </div>
+        </div>
+
+        <div class="chart" id="chart"></div>
+
+        <div class="footer-note">
+          Data is stored locally in your browser using <span>localStorage</span>.
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
