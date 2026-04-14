@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Crochet Muse – Inspo Board</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="logo">
+        <div class="logo-icon">🧶</div>
+        <div class="logo-text">
+          <h1>Crochet Muse</h1>
+          <p>Your daily spark for stitches, colour and cozy ideas.</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <span class="pill">Inspiration mode · On</span>
+        <button class="secondary" id="showFavoritesBtn">Favourites</button>
+        <button class="primary" id="surpriseMeBtn">Surprise me</button>
+      </div>
+    </header>
+
+    <!-- LEFT: GALLERY -->
+    <section class="left">
+      <div class="filters">
+        <label>Explore ideas</label>
+        <div class="chip-group" id="categoryChips">
+          <button class="chip active" data-category="all">All</button>
+          <button class="chip" data-category="wearables">Wearables</button>
+          <button class="chip" data-category="home">Home</button>
+          <button class="chip" data-category="toys">Toys</button>
+          <button class="chip" data-category="seasonal">Seasonal</button>
+        </div>
+        <div class="search-box">
+          <span>🔍</span>
+          <input type="text" id="searchInput" placeholder="Search by vibe, colour, or item..." />
+        </div>
+      </div>
+
+      <div class="gallery" id="gallery"></div>
+      <div class="empty-state" id="emptyState" style="display:none;">
+        No ideas match that search yet—try a different word, or clear filters to see everything again.
+      </div>
+    </section>
+
+    <!-- RIGHT: INSPIRATION TOOLS -->
+    <section class="right">
+      <div class="panel">
+        <h2>Idea prompt generator</h2>
+        <p>Stuck? Tap a button and get a fresh crochet idea to play with.</p>
+        <div class="prompt-display" id="promptDisplay">
+          Click “New prompt” to get a cosy idea.
+        </div>
+        <div class="prompt-meta">
+          <button class="primary" id="newPromptBtn">New prompt</button>
+          <span id="promptTag">Mood: —</span>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Colour palette spark</h2>
+        <p>Try a palette and imagine how it would look in yarn.</p>
+        <div class="tiny-label">Tap a colour to copy its hex code</div>
+        <div class="palette" id="palette"></div>
+      </div>
+
+      <div class="panel">
+        <h2>Mindset boost</h2>
+        <p>Because your creativity matters more than perfection.</p>
+        <div class="quote" id="quoteDisplay">
+          “Every stitch is a tiny act of courage.”
+          <small>— Unknown</small>
+        </div>
+        <button class="secondary" id="newQuoteBtn">Another reminder</button>
+      </div>
+
+      <div class="panel">
+        <h2>Today’s inspiration board</h2>
+        <p>Favourited ideas will appear here while this tab is open.</p>
+        <div class="board-list" id="boardList"></div>
+        <div class="tiny-label" id="boardHint">
+          Tip: tap the heart on any card to pin it here.
+        </div>
+      </div>
+    </section>
+
+    <div class="footer-note">
+      Built with HTML, CSS &amp; JavaScript · Save this page and make it your own crochet dashboard.
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
