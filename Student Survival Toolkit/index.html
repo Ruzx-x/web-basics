@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Grade Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Grade Predictor & Tracker</h1>
+  </header>
+
+  <main>
+    <form id="gradeForm">
+      <input type="text" id="subject" placeholder="Subject" required>
+      <input type="number" id="currentGrade" placeholder="Current Grade (%)" min="0" max="100" required>
+      <input type="number" id="weight" placeholder="Weight (%)" min="0" max="100" required>
+      <input type="number" id="predictedGrade" placeholder="Predicted Grade (%)" min="0" max="100">
+      <button type="submit">Add</button>
+    </form>
+
+    <table id="gradesTable">
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Current Grade</th>
+          <th>Weight (%)</th>
+          <th>Predicted Grade</th>
+          <th>Weighted Final</th>
+          <th>Remove</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="summary" id="summary">
+      Overall Weighted Average: 0%
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
